@@ -14,7 +14,8 @@ function App() {
     setTitle(e.target.value);
   };
 
-  const buttonHandaler = () => {
+  const buttonHandaler = (e) => {
+    e.preventDefault();
     const newData = {
       id: nanoid(),
       title,
@@ -25,10 +26,10 @@ function App() {
 
   return (
     <div className="layout">
-      <div className="form">
-        <input name="title" value={title} onChange={inputTitle} className="input"/>
-        <button onClick={buttonHandaler} className="button">추가하기</button>
-      </div>
+      <form className="form" onSubmit={buttonHandaler}>
+        <input name="title" value={title} onChange={inputTitle} className="input" required/>
+        <button className="button" type="submit">추가하기</button>
+      </form>
       <div className="body-header">
         <h1> Todo List</h1>
       </div>
@@ -37,7 +38,7 @@ function App() {
           data.map((item) =>{
             return(
               <div className="list-wrapper" key={item.id}>
-              <h3>{item.title}</h3>
+              <h3 className="title">{item.title}</h3>
             </div>
             )
           })
