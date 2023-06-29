@@ -1,0 +1,48 @@
+.layout{
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  padding: 30px;
+  gap: 10px;
+}
+
+.input{
+  width: 300px;
+  border-radius: 12px;
+}
+
+.button{
+  background-color: rgb(192, 210, 150);
+  border-radius: 12px;
+  width: 100px;
+}
+
+.body-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listcointainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-wrapper{
+  background-color: aquamarine;
+  border: 2px solid black;
+  width: 100px;
+  height: 150px;
+  border-radius: 12px;
+  padding: 12px 24px 24px;
+  margin-left: 8px ;
+  margin-bottom: 8px;
+
+}
